@@ -1,3 +1,3 @@
 # mergevcfs
 
-Merge compressed vcfs from data to results folders whit vcf-merge.
+Merge compressed vcfs from data to results folders with vcf-merge.
