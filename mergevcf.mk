@@ -1,0 +1,1 @@
+MERGEVCF_NAME="merged"
