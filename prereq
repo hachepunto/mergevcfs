@@ -1,0 +1,6 @@
+find -L data/ \
+	-name '*.vcf.gz' \
+	-o -name '*.vcf' \
+| sed \
+	-e 's#\.vcf$#.vcf.gz#' \
+	-e 's#\.vcf\.gz$#.vcf.gz.tbi#'
