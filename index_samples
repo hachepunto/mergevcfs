@@ -1,0 +1,8 @@
+#!/bin/sh
+find -L data/ \
+	-name '*.vcf' \
+	-o -name '*.vcf.gz' \
+| xargs \
+	-l \
+	-I '{}' \
+	sh -c 'echo -n {}; zcat {} | ./which_samples'
