@@ -1,0 +1,17 @@
+#!/usr/bin/awk -f
+BEGIN {
+	sample_start=10
+	OFS="\t"
+	ORS="\n"	
+}
+
+/^#CHROM/ {
+	for (i=sample_start; i <= NF; i++) {
+		printf(OFS $i)
+	}
+	printf(ORS)
+}
+
+! /^#/ {
+	nextfile
+}
